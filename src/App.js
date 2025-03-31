@@ -1,25 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import logo from "./goaat_logo.png";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div className="container">
+      <div className="title-logo">
+        <img src={logo} alt="GOAAT Logo" className="logo" />
+        <t />
+        <h2 className="title">
+          GNN Output Area
+          <br />
+          <span> Analysis Toolkit (GOAAT)</span>
+        </h2>
+      </div>
+      <h4 className="description">
+        GOAAT is currently hosted on Streamlit. <br />
+        Click below to launch it:
+      </h4>
+      <button
+        className="launch-button"
+        onClick={() =>
+          (window.location.href = "https://goaatoolkit.streamlit.app")
+        }
+      >
+        Launch app
+      </button>
+      <br></br>
+      <br></br>
+
+      <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "left" }}>
+        <p style={{ marginBottom: "1rem" }}>
+          ----------------------------------------------------------------------------------------------------------------------------
+          <br></br>
+          This work was done under the UKRI-funded (EP/W03235X/1, EP/W032333/1,
+          EP/W032341/1, EP/W032058/1, EP/W032082/1) project called PRIME
+          (Protecting Minority Ethnic Communities Online). For more information,
+          comments or suggestions, please contact Mehdi Rizvi (s.rizvi@hw.ac.uk)
+          or Lynne Baillie (l.baillie@hw.ac.uk)
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <p>
+          The citation for this work is: Rizvi, M., Baillie, L., Pang, W.,
+          Shahandashti, S., Yuan, Y., Ghosh, S., Lewinska, P., Chen, K.,
+          Edmondson, A., Anil Kumar, A. S., Jagadeesan, V. B., Jacob, F., &
+          Dodd, C. (2025). “Carefully Connected – Towards Designing More
+          Equitable Digital Services,”{" "}
+          <a
+            href="https://doi.org/10.17861/C1DX-PQ86"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#2563eb", textDecoration: "underline" }}
+          >
+            https://doi.org/10.17861/C1DX-PQ86
+          </a>
+        </p>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
